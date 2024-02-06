@@ -9,6 +9,7 @@
     tools:context=".MainActivity">
 
     <TextView
+
         android:textColor="?attr/colorOnPrimary"
         android:textSize="33sp"
         android:layout_width="wrap_content"
