@@ -5,7 +5,7 @@
 
         <!--Color Primary-->
         <item name="colorPrimary">@color/black</item>
-        <item name="colorPrimaryVariant">@color/black</item>
+        <item name="colorPrimaryVariant">@color/dark_gray</item>
         <item name="colorOnPrimary">@color/white</item>
 
         <!--Color Secondary-->

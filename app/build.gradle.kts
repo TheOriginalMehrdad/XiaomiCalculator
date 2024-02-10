@@ -7,7 +7,7 @@ android {
     namespace = "com.example.xiaomicalculator"
     compileSdk = 34
 
-    buildFeatures{
+    buildFeatures {
         viewBinding = true
     }
 
@@ -48,4 +48,8 @@ dependencies {
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+
+
+    // ObjectHunter library for arithmetic operations
+    implementation("net.objecthunter:exp4j:0.4.8")
 }

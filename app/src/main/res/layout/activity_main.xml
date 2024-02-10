@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -10,38 +9,54 @@
     android:weightSum="20"
     tools:context=".MainActivity">
 
-    <TextView
-        android:layout_weight="1"
-        android:textAlignment="viewEnd"
-        android:maxLines="1"
-        android:textColor="?attr/colorOnPrimary"
+    <HorizontalScrollView
+        android:id="@+id/horizonScrollViewExp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="9dp"
-        android:layout_marginEnd="33dp"
-        android:layout_gravity="end"
-        android:text="369"
-        android:textSize="@dimen/text_view_size_big"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:paddingEnd="9dp"
+        android:scrollbars="none">
 
-    <TextView
-        android:layout_weight="1"
-        android:textAlignment="viewEnd"
-        android:maxLines="1"
-        android:textColor="?attr/colorOnPrimary"
+        <TextView
+            android:id="@+id/txtExpression"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:text="0"
+            android:textAlignment="viewEnd"
+            android:textColor="?attr/colorOnPrimary"
+            android:textSize="@dimen/text_view_size_big" />
+
+    </HorizontalScrollView>
+
+    <HorizontalScrollView
+        android:id="@+id/horizonScrollViewRes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:layout_marginBottom="9dp"
-        android:layout_marginEnd="33dp"
-        android:layout_gravity="end"
-        android:text="= 369"
-        android:textSize="@dimen/text_view_size_small"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"/>
+        android:paddingEnd="9dp">
+
+        <TextView
+            android:id="@+id/txtResult"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:layout_weight="1"
+            android:maxLines="1"
+            android:textAlignment="viewEnd"
+            android:textColor="?attr/colorPrimaryVariant"
+            android:textSize="@dimen/text_view_size_small" />
+
+    </HorizontalScrollView>
 
     <View
-        android:layout_marginEnd="10dp"
-        android:layout_marginStart="10dp"
-        android:background="@color/light_gray"
         android:layout_width="347dp"
-        android:layout_height="1dp"/>
+        android:layout_height="1dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:background="@color/light_gray" />
 
     <TableLayout
         android:layout_width="match_parent"
@@ -49,8 +64,9 @@
         android:layout_marginStart="9dp"
         android:layout_marginTop="16dp"
         android:layout_marginEnd="9dp"
+        android:layout_marginBottom="13dp"
         android:layout_weight="8"
-        android:weightSum="4"
+        android:weightSum="5"
         tools:ignore="InefficientWeight,UselessParent">
 
         <TableRow
@@ -63,6 +79,7 @@
             tools:ignore="UselessParent">
 
             <Button
+                android:id="@+id/btnAc"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -72,25 +89,27 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/parenthesesOpen"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:layoutDirection="rtl"
-                android:text=">"
+                android:text="("
                 android:textColor="?attr/colorSecondary"
                 android:textSize="@dimen/text_button_size_medium"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/parenthesesClose"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="%"
+                android:text=")"
                 android:textColor="?attr/colorSecondary"
                 android:textSize="@dimen/text_button_size_medium"
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnDivision"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -112,6 +131,7 @@
             tools:ignore="UselessParent">
 
             <Button
+                android:id="@+id/btnNumber7"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -121,6 +141,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnNumber8"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -130,6 +151,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnNumber9"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -139,6 +161,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnMultiplication"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -160,6 +183,7 @@
             tools:ignore="UselessParent">
 
             <Button
+                android:id="@+id/btnNumber4"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -169,6 +193,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnNumber5"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -178,6 +203,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnNumber6"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -187,6 +213,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnSubtraction"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -208,6 +235,7 @@
             tools:ignore="UselessParent">
 
             <Button
+                android:id="@+id/btnNumber1"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -217,6 +245,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnNumber2"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -226,6 +255,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnNumber3"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -235,6 +265,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnAddition"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -255,16 +286,18 @@
             android:weightSum="4"
             tools:ignore="UselessParent">
 
-            <Button
+            <ImageButton
+                android:id="@+id/btnDelete"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:text="AC"
+                android:background="@drawable/shape"
+                android:src="@drawable/ic_subtraction"
                 android:textColor="?attr/colorSecondary"
-                android:textSize="@dimen/text_button_size_small"
-                tools:ignore="ButtonStyle,HardcodedText" />
+                android:textSize="@dimen/text_button_size_big" />
 
             <Button
+                android:id="@+id/btnNumber0"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -274,6 +307,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <Button
+                android:id="@+id/btnDot"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -283,6 +317,7 @@
                 tools:ignore="ButtonStyle,HardcodedText" />
 
             <ImageButton
+                android:id="@+id/btnEqual"
                 android:layout_width="0dp"
                 android:layout_height="match_parent"
                 android:layout_weight="1"
@@ -296,5 +331,6 @@
 
 
     </TableLayout>
+
 
 </LinearLayout>
