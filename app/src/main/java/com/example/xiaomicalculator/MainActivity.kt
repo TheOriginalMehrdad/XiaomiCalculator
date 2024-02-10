@@ -44,7 +44,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-
         binding.btnMultiplication.setOnClickListener {
 
             if (binding.txtExpression.text.isNotEmpty() && binding.txtExpression.text.toString() != "0") {
